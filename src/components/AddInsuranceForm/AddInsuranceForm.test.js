@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import AddInsuranceForm from './AddInsuranceForm';
 import { FormInput, FormLabel, Button } from 'react-native-elements';
 
-describe('AddInsuranceForm Component', () => {
+describe('<AddInsuranceForm />', () => {
     const component = shallow(<AddInsuranceForm />);
 
     it('renders properly', () => {
