@@ -1,7 +1,15 @@
 import { TabNavigator } from 'react-navigation';
+
 import AddInsuranceScreen from './screens/AddInsuranceScreen';
+import InsurancesScreen from './screens/InsurancesScreen';
 
 const MainRouter = TabNavigator({
-    insurances: { screen: },
-    addinsurance: { screen: AddInsuranceScreen };
+    insurances: { screen: InsurancesScreen },
+    addinsurance: { screen: AddInsuranceScreen },
+}, {
+    navigationOptions: {
+        tabBarVisible: false
+    }
 });
+
+export default MainRouter;

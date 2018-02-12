@@ -1,4 +1,3 @@
-import '../../setupTest';
 import React from 'react';
 import { shallow } from 'enzyme';
 import AddInsuranceForm from './AddInsuranceForm';
