@@ -18,25 +18,59 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <FormLabel>
+        <FormLabel
+          labelStyle={
+            Object {
+              "color": "#EE712B",
+              "fontSize": 18,
+            }
+          }
+        >
           Title:
         </FormLabel>,
         <FormInput
           normalizeFontSize={true}
         />,
-        <FormLabel>
+        <FormLabel
+          labelStyle={
+            Object {
+              "color": "#EE712B",
+              "fontSize": 18,
+            }
+          }
+        >
           Premium (yearly):
         </FormLabel>,
         <FormInput
           normalizeFontSize={true}
         />,
-        <FormLabel>
+        <FormLabel
+          labelStyle={
+            Object {
+              "color": "#EE712B",
+              "fontSize": 18,
+            }
+          }
+        >
           Category:
         </FormLabel>,
         <FormInput
           normalizeFontSize={true}
         />,
-        <Button />,
+        <Button
+          buttonStyle={
+            Object {
+              "backgroundColor": "#DC4712",
+              "height": 60,
+            }
+          }
+          textStyle={
+            Object {
+              "fontSize": 18,
+            }
+          }
+          title="Done"
+        />,
       ],
     },
     "ref": null,
@@ -47,6 +81,10 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "Title:",
+          "labelStyle": Object {
+            "color": "#EE712B",
+            "fontSize": 18,
+          },
         },
         "ref": null,
         "rendered": "Title:",
@@ -69,6 +107,10 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "Premium (yearly):",
+          "labelStyle": Object {
+            "color": "#EE712B",
+            "fontSize": 18,
+          },
         },
         "ref": null,
         "rendered": "Premium (yearly):",
@@ -91,6 +133,10 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "Category:",
+          "labelStyle": Object {
+            "color": "#EE712B",
+            "fontSize": 18,
+          },
         },
         "ref": null,
         "rendered": "Category:",
@@ -111,7 +157,16 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "buttonStyle": Object {
+            "backgroundColor": "#DC4712",
+            "height": 60,
+          },
+          "textStyle": Object {
+            "fontSize": 18,
+          },
+          "title": "Done",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -126,25 +181,59 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <FormLabel>
+          <FormLabel
+            labelStyle={
+              Object {
+                "color": "#EE712B",
+                "fontSize": 18,
+              }
+            }
+          >
             Title:
           </FormLabel>,
           <FormInput
             normalizeFontSize={true}
           />,
-          <FormLabel>
+          <FormLabel
+            labelStyle={
+              Object {
+                "color": "#EE712B",
+                "fontSize": 18,
+              }
+            }
+          >
             Premium (yearly):
           </FormLabel>,
           <FormInput
             normalizeFontSize={true}
           />,
-          <FormLabel>
+          <FormLabel
+            labelStyle={
+              Object {
+                "color": "#EE712B",
+                "fontSize": 18,
+              }
+            }
+          >
             Category:
           </FormLabel>,
           <FormInput
             normalizeFontSize={true}
           />,
-          <Button />,
+          <Button
+            buttonStyle={
+              Object {
+                "backgroundColor": "#DC4712",
+                "height": 60,
+              }
+            }
+            textStyle={
+              Object {
+                "fontSize": 18,
+              }
+            }
+            title="Done"
+          />,
         ],
       },
       "ref": null,
@@ -155,6 +244,10 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Title:",
+            "labelStyle": Object {
+              "color": "#EE712B",
+              "fontSize": 18,
+            },
           },
           "ref": null,
           "rendered": "Title:",
@@ -177,6 +270,10 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Premium (yearly):",
+            "labelStyle": Object {
+              "color": "#EE712B",
+              "fontSize": 18,
+            },
           },
           "ref": null,
           "rendered": "Premium (yearly):",
@@ -199,6 +296,10 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Category:",
+            "labelStyle": Object {
+              "color": "#EE712B",
+              "fontSize": 18,
+            },
           },
           "ref": null,
           "rendered": "Category:",
@@ -219,7 +320,16 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "buttonStyle": Object {
+              "backgroundColor": "#DC4712",
+              "height": 60,
+            },
+            "textStyle": Object {
+              "fontSize": 18,
+            },
+            "title": "Done",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

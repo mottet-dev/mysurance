@@ -18,17 +18,65 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <Header />,
+        <StatusBar
+          animated={false}
+          hidden={true}
+          showHideTransition="fade"
+        />,
+        <Header
+          centerComponent={
+            Object {
+              "style": Object {
+                "color": "#FBF7F7",
+                "fontSize": 20,
+              },
+              "text": "Add Insurance",
+            }
+          }
+          outerContainerStyles={
+            Object {
+              "backgroundColor": "#DC4712",
+            }
+          }
+        />,
         <AddInsuranceForm />,
       ],
+      "style": Object {
+        "backgroundColor": "#F1E9E3",
+        "flex": 1,
+      },
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "animated": false,
+          "hidden": true,
+          "showHideTransition": "fade",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "centerComponent": Object {
+            "style": Object {
+              "color": "#FBF7F7",
+              "fontSize": 20,
+            },
+            "text": "Add Insurance",
+          },
+          "outerContainerStyles": Object {
+            "backgroundColor": "#DC4712",
+          },
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -52,17 +100,65 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <Header />,
+          <StatusBar
+            animated={false}
+            hidden={true}
+            showHideTransition="fade"
+          />,
+          <Header
+            centerComponent={
+              Object {
+                "style": Object {
+                  "color": "#FBF7F7",
+                  "fontSize": 20,
+                },
+                "text": "Add Insurance",
+              }
+            }
+            outerContainerStyles={
+              Object {
+                "backgroundColor": "#DC4712",
+              }
+            }
+          />,
           <AddInsuranceForm />,
         ],
+        "style": Object {
+          "backgroundColor": "#F1E9E3",
+          "flex": 1,
+        },
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "animated": false,
+            "hidden": true,
+            "showHideTransition": "fade",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "centerComponent": Object {
+              "style": Object {
+                "color": "#FBF7F7",
+                "fontSize": 20,
+              },
+              "text": "Add Insurance",
+            },
+            "outerContainerStyles": Object {
+              "backgroundColor": "#DC4712",
+            },
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
