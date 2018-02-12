@@ -10,12 +10,16 @@ describe('<AddInsuranceForm />', () => {
         expect(component).toMatchSnapshot();
     });
 
-    it('contains 3 <FormInput />', () => {
-        expect(component.find('View').children(FormInput).length).toEqual(3);
+    it('contains 2 <FormInput />', () => {
+        expect(component.find('View > View').children(FormInput).length).toEqual(2);
     });
 
-    it('contais 3 <FormLabel />', () => {
-        expect(component.find('View').children(FormLabel).length).toEqual(3);
+    it('contains 3 <FormLabel />', () => {
+        expect(component.find('View > View').children(FormLabel).length).toEqual(3);
+    });
+
+    it('contains 1 <Picker />', () => {
+        expect(component.find('View > View').children('Picker').length).toEqual(1);
     });
 
     it('contains 1 <Button />', () => {
