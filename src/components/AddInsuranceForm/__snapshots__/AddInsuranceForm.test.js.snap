@@ -86,10 +86,9 @@ ShallowWrapper {
             Category:
           </FormLabel>
           <Picker
-            mode="dialog"
+            mode="dropdown"
             pickerItemStyle={
               Object {
-                "borderWidth": 0.5,
                 "color": "black",
                 "fontSize": 16,
               }
@@ -217,10 +216,9 @@ ShallowWrapper {
               Category:
             </FormLabel>,
             <Picker
-              mode="dialog"
+              mode="dropdown"
               pickerItemStyle={
                 Object {
-                  "borderWidth": 0.5,
                   "color": "black",
                   "fontSize": 16,
                 }
@@ -360,9 +358,8 @@ ShallowWrapper {
                   value="houseInsurance"
                 />,
               ],
-              "mode": "dialog",
+              "mode": "dropdown",
               "pickerItemStyle": Object {
-                "borderWidth": 0.5,
                 "color": "black",
                 "fontSize": 16,
               },
@@ -537,10 +534,9 @@ ShallowWrapper {
               Category:
             </FormLabel>
             <Picker
-              mode="dialog"
+              mode="dropdown"
               pickerItemStyle={
                 Object {
-                  "borderWidth": 0.5,
                   "color": "black",
                   "fontSize": 16,
                 }
@@ -668,10 +664,9 @@ ShallowWrapper {
                 Category:
               </FormLabel>,
               <Picker
-                mode="dialog"
+                mode="dropdown"
                 pickerItemStyle={
                   Object {
-                    "borderWidth": 0.5,
                     "color": "black",
                     "fontSize": 16,
                   }
@@ -811,9 +806,8 @@ ShallowWrapper {
                     value="houseInsurance"
                   />,
                 ],
-                "mode": "dialog",
+                "mode": "dropdown",
                 "pickerItemStyle": Object {
-                  "borderWidth": 0.5,
                   "color": "black",
                   "fontSize": 16,
                 },

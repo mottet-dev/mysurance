@@ -14,7 +14,8 @@ class AddInsuranceForm extends Component {
             formInputContainerStyle,
             formInputStyle,
             pickerStyle,
-            pickerItemStyle } = styles;
+            pickerItemStyle 
+        } = styles;
 
         return (
             <View style={formStyle}>
@@ -96,7 +97,6 @@ const styles = {
     pickerItemStyle: {
         color: 'black',
         fontSize: 16,
-        borderWidth: 0.5,
     }
 }
 
