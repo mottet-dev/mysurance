@@ -1,0 +1,2 @@
+export const ADD_INSURANCE = 'ADD_INSURANCE';
+export const REMOVE_INSURANCE = 'REMOVE_INSURANCE';
