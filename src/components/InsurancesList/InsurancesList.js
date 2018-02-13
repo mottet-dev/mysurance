@@ -1,27 +1,20 @@
 import React, { Component } from 'react';
 import { ListView } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
+import { connect } from 'react-redux';
 
 import { textColor } from '../../constants';
 
 class InsurancesList extends Component {
-    constructor(props){
-        super(props);
-        const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-        this.state = {
-            dataSource: ds.cloneWithRows([]),
-        };
-    }
-
     renderRow(rowData) {
         return (
             <ListItem 
-                title="Groupe Mutuel"
-                subtitle="Health Insurance"
+                title={rowData.title}
+                subtitle={rowData.category}
                 chevronColor="black"
                 titleStyle={{ color: textColor, fontSize: 18, fontWeight: 'bold' }}
                 subtitleStyle={{ color: textColor, fontSize: 16, fontWeight: 'normal' }}
-                rightTitle="2000$"
+                rightTitle={rowData.premium}
                 rightTitleStyle={{ color: textColor, fontSize: 16, fontWeight: 'normal' }}
             />
         );
@@ -34,7 +27,7 @@ class InsurancesList extends Component {
             <List containerStyle={listStyle}>
                 <ListView
                     renderRow={this.renderRow}
-                    dataSource={this.state.dataSource}
+                    dataSource={this.props.dataSource}
                 />
             </List>
         );
@@ -48,5 +41,9 @@ const styles = {
     }
 }
 
+const mapStateToProps = state => {
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    return { dataSource: ds.cloneWithRows(state.insurances) };
+}
 
-export default InsurancesList;
+export default connect(mapStateToProps)(InsurancesList);

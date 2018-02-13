@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { View, Picker } from 'react-native';
 import { FormInput, FormLabel, Button } from 'react-native-elements';
+import { connect } from 'react-redux';
 import axios from 'axios';
 
 import { textColor, strongColor, lightColor } from '../../constants';
+import { add_insurance } from '../../actions/insurances_actions';
 
 class AddInsuranceForm extends Component {
     constructor(props) {
@@ -12,7 +14,7 @@ class AddInsuranceForm extends Component {
         this.state = {
             title: '',
             premium: '',
-            category: 'healthinsurance',
+            selectedCategory: '',
             categories: []
         };
     }
@@ -23,7 +25,11 @@ class AddInsuranceForm extends Component {
                 const categories = response.data.query.categorymembers.map(category => {
                     return category.title.replace('Category:', '');
                 });
-                this.setState({ categories });
+
+                this.setState({ 
+                    categories,
+                    selectedCategory: categories[0]
+                });
             })
             .catch(error => {
                 console.log(error);
@@ -34,6 +40,13 @@ class AddInsuranceForm extends Component {
         return this.state.categories.map(category => {
             return (<Picker.Item key={category} label={category} value={category} />);
         });
+    }
+
+    handleButtonPress() {
+        const { title, premium, selectedCategory } = this.state;
+        const insurance = { title, premium, category: selectedCategory };
+
+        this.props.add_insurance(insurance);
     }
 
     render() {
@@ -48,7 +61,7 @@ class AddInsuranceForm extends Component {
             pickerItemStyle 
         } = styles;
 
-        const { title, premium, category } = this.state;
+        const { title, premium, category, selectedCategory } = this.state;
 
         return (
             <View style={formStyle}>
@@ -80,6 +93,8 @@ class AddInsuranceForm extends Component {
                         style={pickerStyle}
                         pickerItemStyle={pickerItemStyle}
                         mode="dropdown"
+                        selectedValue={selectedCategory}
+                        onValueChange={(itemValue, itemIndex) => this.setState({selectedCategory: itemValue})}
                     >
                         {this.renderPicker()}
                     </Picker>
@@ -90,6 +105,7 @@ class AddInsuranceForm extends Component {
                         title="Done"
                         buttonStyle={buttonStyle}
                         textStyle={buttonTextStyle}
+                        onPress={() => this.handleButtonPress()}
                     />
                 </View>
             </View>
@@ -137,4 +153,4 @@ const styles = {
     }
 }
 
-export default AddInsuranceForm;
+export default connect(null, { add_insurance })(AddInsuranceForm);
