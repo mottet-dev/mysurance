@@ -9,7 +9,8 @@ const MainRouter = TabNavigator({
 }, {
     navigationOptions: {
         tabBarVisible: false
-    }
+    },
+    lazy: true
 });
 
 export default MainRouter;

@@ -20,7 +20,7 @@ ShallowWrapper {
       "children": <ListViewMock
         dataSource={
           ListViewDataSource {
-            "items": 12,
+            "items": 0,
           }
         }
         renderRow={[Function]}
@@ -38,7 +38,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "dataSource": ListViewDataSource {
-          "items": 12,
+          "items": 0,
         },
         "renderRow": [Function],
         "renderScrollComponent": [Function],
@@ -58,7 +58,7 @@ ShallowWrapper {
         "children": <ListViewMock
           dataSource={
             ListViewDataSource {
-              "items": 12,
+              "items": 0,
             }
           }
           renderRow={[Function]}
@@ -76,7 +76,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "dataSource": ListViewDataSource {
-            "items": 12,
+            "items": 0,
           },
           "renderRow": [Function],
           "renderScrollComponent": [Function],

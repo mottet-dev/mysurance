@@ -20,11 +20,16 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "moduleNameMapper": { "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js", "\\.(css|less)$": "<rootDir>/assetsTransformer.js" },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/assetsTransformer.js"
+    },
     "setupTestFrameworkScriptFile": "./src/setupTest.js"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "expo": "^25.0.0",
+    "lodash": "^4.17.5",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-elements": "^0.19.0",

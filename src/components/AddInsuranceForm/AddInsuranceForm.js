@@ -1,10 +1,41 @@
 import React, { Component } from 'react';
 import { View, Picker } from 'react-native';
 import { FormInput, FormLabel, Button } from 'react-native-elements';
+import axios from 'axios';
 
 import { textColor, strongColor, lightColor } from '../../constants';
 
 class AddInsuranceForm extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            title: '',
+            premium: '',
+            category: 'healthinsurance',
+            categories: []
+        };
+    }
+
+    componentDidMount() {
+        axios.get('https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Types_of_insurance&cmtype=subcat&format=json&origin=*')
+            .then(response => {
+                const categories = response.data.query.categorymembers.map(category => {
+                    return category.title.replace('Category:', '');
+                });
+                this.setState({ categories });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
+    renderPicker() {
+        return this.state.categories.map(category => {
+            return (<Picker.Item key={category} label={category} value={category} />);
+        });
+    }
+
     render() {
         const { 
             labelStyle, 
@@ -17,6 +48,8 @@ class AddInsuranceForm extends Component {
             pickerItemStyle 
         } = styles;
 
+        const { title, premium, category } = this.state;
+
         return (
             <View style={formStyle}>
                 <View>
@@ -26,6 +59,9 @@ class AddInsuranceForm extends Component {
                         inputStyle={formInputStyle}
                         underlineColorAndroid={'transparent'}
                         keyboardType="default"
+                        label="title"
+                        value={title}
+                        onChangeText={text => this.setState({ title: text})}
                     />
 
                     <FormLabel labelStyle={labelStyle}>Premium (yearly):</FormLabel>
@@ -34,6 +70,9 @@ class AddInsuranceForm extends Component {
                         inputStyle={formInputStyle}
                         underlineColorAndroid={'transparent'}
                         keyboardType="numeric"
+                        label="premium"
+                        value={premium}
+                        onChangeText={text => this.setState({ premium: text})}
                     />
 
                     <FormLabel labelStyle={labelStyle}>Category:</FormLabel>
@@ -42,9 +81,7 @@ class AddInsuranceForm extends Component {
                         pickerItemStyle={pickerItemStyle}
                         mode="dropdown"
                     >
-                        <Picker.Item label="Health Insurance" value="healthInsurance" />
-                        <Picker.Item label="Car Insurance" value="carInsurance" />
-                        <Picker.Item label="House Insurance" value="houseInsurance" />
+                        {this.renderPicker()}
                     </Picker>
                 </View>
 

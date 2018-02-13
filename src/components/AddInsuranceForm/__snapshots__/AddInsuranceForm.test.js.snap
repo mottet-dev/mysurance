@@ -44,8 +44,11 @@ ShallowWrapper {
               }
             }
             keyboardType="default"
+            label="title"
             normalizeFontSize={true}
+            onChangeText={[Function]}
             underlineColorAndroid="transparent"
+            value=""
           />
           <FormLabel
             labelStyle={
@@ -72,8 +75,11 @@ ShallowWrapper {
               }
             }
             keyboardType="numeric"
+            label="premium"
             normalizeFontSize={true}
+            onChangeText={[Function]}
             underlineColorAndroid="transparent"
+            value=""
           />
           <FormLabel
             labelStyle={
@@ -87,12 +93,14 @@ ShallowWrapper {
           </FormLabel>
           <Picker
             mode="dropdown"
+            onValueChange={[Function]}
             pickerItemStyle={
               Object {
                 "color": "black",
                 "fontSize": 16,
               }
             }
+            selectedValue="healthinsurance"
             style={
               Object {
                 "backgroundColor": "#FBF7F7",
@@ -103,17 +111,18 @@ ShallowWrapper {
               }
             }
           >
+            &gt;
             <PickerItem
               label="Health Insurance"
-              value="healthInsurance"
+              value="healthinsurance"
             />
             <PickerItem
               label="Car Insurance"
-              value="carInsurance"
+              value="carinsurance"
             />
             <PickerItem
               label="House Insurance"
-              value="houseInsurance"
+              value="houseinsurance"
             />
           </Picker>
         </View>,
@@ -174,8 +183,11 @@ ShallowWrapper {
                 }
               }
               keyboardType="default"
+              label="title"
               normalizeFontSize={true}
+              onChangeText={[Function]}
               underlineColorAndroid="transparent"
+              value=""
             />,
             <FormLabel
               labelStyle={
@@ -202,8 +214,11 @@ ShallowWrapper {
                 }
               }
               keyboardType="numeric"
+              label="premium"
               normalizeFontSize={true}
+              onChangeText={[Function]}
               underlineColorAndroid="transparent"
+              value=""
             />,
             <FormLabel
               labelStyle={
@@ -217,12 +232,14 @@ ShallowWrapper {
             </FormLabel>,
             <Picker
               mode="dropdown"
+              onValueChange={[Function]}
               pickerItemStyle={
                 Object {
                   "color": "black",
                   "fontSize": 16,
                 }
               }
+              selectedValue="healthinsurance"
               style={
                 Object {
                   "backgroundColor": "#FBF7F7",
@@ -233,17 +250,18 @@ ShallowWrapper {
                 }
               }
             >
+              &gt;
               <PickerItem
                 label="Health Insurance"
-                value="healthInsurance"
+                value="healthinsurance"
               />
               <PickerItem
                 label="Car Insurance"
-                value="carInsurance"
+                value="carinsurance"
               />
               <PickerItem
                 label="House Insurance"
-                value="houseInsurance"
+                value="houseinsurance"
               />
             </Picker>,
           ],
@@ -280,8 +298,11 @@ ShallowWrapper {
                 "fontSize": 16,
               },
               "keyboardType": "default",
+              "label": "title",
               "normalizeFontSize": true,
+              "onChangeText": [Function],
               "underlineColorAndroid": "transparent",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -317,8 +338,11 @@ ShallowWrapper {
                 "fontSize": 16,
               },
               "keyboardType": "numeric",
+              "label": "premium",
               "normalizeFontSize": true,
+              "onChangeText": [Function],
               "underlineColorAndroid": "transparent",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -345,24 +369,27 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": Array [
+                ">",
                 <PickerItem
                   label="Health Insurance"
-                  value="healthInsurance"
+                  value="healthinsurance"
                 />,
                 <PickerItem
                   label="Car Insurance"
-                  value="carInsurance"
+                  value="carinsurance"
                 />,
                 <PickerItem
                   label="House Insurance"
-                  value="houseInsurance"
+                  value="houseinsurance"
                 />,
               ],
               "mode": "dropdown",
+              "onValueChange": [Function],
               "pickerItemStyle": Object {
                 "color": "black",
                 "fontSize": 16,
               },
+              "selectedValue": "healthinsurance",
               "style": Object {
                 "backgroundColor": "#FBF7F7",
                 "borderColor": "#95989A",
@@ -373,13 +400,14 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
+              ">",
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "1",
                 "nodeType": "class",
                 "props": Object {
                   "label": "Health Insurance",
-                  "value": "healthInsurance",
+                  "value": "healthinsurance",
                 },
                 "ref": null,
                 "rendered": null,
@@ -387,11 +415,11 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "2",
                 "nodeType": "class",
                 "props": Object {
                   "label": "Car Insurance",
-                  "value": "carInsurance",
+                  "value": "carinsurance",
                 },
                 "ref": null,
                 "rendered": null,
@@ -399,11 +427,11 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "3",
                 "nodeType": "class",
                 "props": Object {
                   "label": "House Insurance",
-                  "value": "houseInsurance",
+                  "value": "houseinsurance",
                 },
                 "ref": null,
                 "rendered": null,
@@ -492,8 +520,11 @@ ShallowWrapper {
                 }
               }
               keyboardType="default"
+              label="title"
               normalizeFontSize={true}
+              onChangeText={[Function]}
               underlineColorAndroid="transparent"
+              value=""
             />
             <FormLabel
               labelStyle={
@@ -520,8 +551,11 @@ ShallowWrapper {
                 }
               }
               keyboardType="numeric"
+              label="premium"
               normalizeFontSize={true}
+              onChangeText={[Function]}
               underlineColorAndroid="transparent"
+              value=""
             />
             <FormLabel
               labelStyle={
@@ -535,12 +569,14 @@ ShallowWrapper {
             </FormLabel>
             <Picker
               mode="dropdown"
+              onValueChange={[Function]}
               pickerItemStyle={
                 Object {
                   "color": "black",
                   "fontSize": 16,
                 }
               }
+              selectedValue="healthinsurance"
               style={
                 Object {
                   "backgroundColor": "#FBF7F7",
@@ -551,17 +587,18 @@ ShallowWrapper {
                 }
               }
             >
+              &gt;
               <PickerItem
                 label="Health Insurance"
-                value="healthInsurance"
+                value="healthinsurance"
               />
               <PickerItem
                 label="Car Insurance"
-                value="carInsurance"
+                value="carinsurance"
               />
               <PickerItem
                 label="House Insurance"
-                value="houseInsurance"
+                value="houseinsurance"
               />
             </Picker>
           </View>,
@@ -622,8 +659,11 @@ ShallowWrapper {
                   }
                 }
                 keyboardType="default"
+                label="title"
                 normalizeFontSize={true}
+                onChangeText={[Function]}
                 underlineColorAndroid="transparent"
+                value=""
               />,
               <FormLabel
                 labelStyle={
@@ -650,8 +690,11 @@ ShallowWrapper {
                   }
                 }
                 keyboardType="numeric"
+                label="premium"
                 normalizeFontSize={true}
+                onChangeText={[Function]}
                 underlineColorAndroid="transparent"
+                value=""
               />,
               <FormLabel
                 labelStyle={
@@ -665,12 +708,14 @@ ShallowWrapper {
               </FormLabel>,
               <Picker
                 mode="dropdown"
+                onValueChange={[Function]}
                 pickerItemStyle={
                   Object {
                     "color": "black",
                     "fontSize": 16,
                   }
                 }
+                selectedValue="healthinsurance"
                 style={
                   Object {
                     "backgroundColor": "#FBF7F7",
@@ -681,17 +726,18 @@ ShallowWrapper {
                   }
                 }
               >
+                &gt;
                 <PickerItem
                   label="Health Insurance"
-                  value="healthInsurance"
+                  value="healthinsurance"
                 />
                 <PickerItem
                   label="Car Insurance"
-                  value="carInsurance"
+                  value="carinsurance"
                 />
                 <PickerItem
                   label="House Insurance"
-                  value="houseInsurance"
+                  value="houseinsurance"
                 />
               </Picker>,
             ],
@@ -728,8 +774,11 @@ ShallowWrapper {
                   "fontSize": 16,
                 },
                 "keyboardType": "default",
+                "label": "title",
                 "normalizeFontSize": true,
+                "onChangeText": [Function],
                 "underlineColorAndroid": "transparent",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -765,8 +814,11 @@ ShallowWrapper {
                   "fontSize": 16,
                 },
                 "keyboardType": "numeric",
+                "label": "premium",
                 "normalizeFontSize": true,
+                "onChangeText": [Function],
                 "underlineColorAndroid": "transparent",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -793,24 +845,27 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": Array [
+                  ">",
                   <PickerItem
                     label="Health Insurance"
-                    value="healthInsurance"
+                    value="healthinsurance"
                   />,
                   <PickerItem
                     label="Car Insurance"
-                    value="carInsurance"
+                    value="carinsurance"
                   />,
                   <PickerItem
                     label="House Insurance"
-                    value="houseInsurance"
+                    value="houseinsurance"
                   />,
                 ],
                 "mode": "dropdown",
+                "onValueChange": [Function],
                 "pickerItemStyle": Object {
                   "color": "black",
                   "fontSize": 16,
                 },
+                "selectedValue": "healthinsurance",
                 "style": Object {
                   "backgroundColor": "#FBF7F7",
                   "borderColor": "#95989A",
@@ -821,13 +876,14 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
+                ">",
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "1",
                   "nodeType": "class",
                   "props": Object {
                     "label": "Health Insurance",
-                    "value": "healthInsurance",
+                    "value": "healthinsurance",
                   },
                   "ref": null,
                   "rendered": null,
@@ -835,11 +891,11 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "2",
                   "nodeType": "class",
                   "props": Object {
                     "label": "Car Insurance",
-                    "value": "carInsurance",
+                    "value": "carinsurance",
                   },
                   "ref": null,
                   "rendered": null,
@@ -847,11 +903,11 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "3",
                   "nodeType": "class",
                   "props": Object {
                     "label": "House Insurance",
-                    "value": "houseInsurance",
+                    "value": "houseinsurance",
                   },
                   "ref": null,
                   "rendered": null,
