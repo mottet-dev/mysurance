@@ -12,7 +12,7 @@ describe('<AddInsuranceScreen />', () => {
     });
 
     it('contains 1 <AddInsuranceForm />', () => {
-        expect(screen.find('View').children('AddInsuranceForm').length)
+        expect(screen.find('View').children('Connect(AddInsuranceForm)').length)
             .toBe(1);
     });
 

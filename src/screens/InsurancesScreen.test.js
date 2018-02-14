@@ -17,7 +17,7 @@ describe('<AddInsuranceScreen />', () => {
     });
 
     it('contains 1 <InsurancesList />', () => {
-        expect(screen.find('View').children('InsurancesList').length)
+        expect(screen.find('View').children('Connect(InsurancesList)').length)
             .toEqual(1);
     });
 });

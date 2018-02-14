@@ -33,13 +33,20 @@ ShallowWrapper {
               "text": "Add Insurance",
             }
           }
+          leftComponent={
+            <NavigationChevron
+              navigateInsurances={[Function]}
+            />
+          }
           outerContainerStyles={
             Object {
               "backgroundColor": "#DC4712",
             }
           }
         />,
-        <AddInsuranceForm />,
+        <Connect(AddInsuranceForm)
+          navigateInsurances={[Function]}
+        />,
       ],
       "style": Object {
         "backgroundColor": "#F1E9E3",
@@ -73,6 +80,9 @@ ShallowWrapper {
             },
             "text": "Add Insurance",
           },
+          "leftComponent": <NavigationChevron
+            navigateInsurances={[Function]}
+          />,
           "outerContainerStyles": Object {
             "backgroundColor": "#DC4712",
           },
@@ -85,7 +95,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "navigateInsurances": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -115,13 +127,20 @@ ShallowWrapper {
                 "text": "Add Insurance",
               }
             }
+            leftComponent={
+              <NavigationChevron
+                navigateInsurances={[Function]}
+              />
+            }
             outerContainerStyles={
               Object {
                 "backgroundColor": "#DC4712",
               }
             }
           />,
-          <AddInsuranceForm />,
+          <Connect(AddInsuranceForm)
+            navigateInsurances={[Function]}
+          />,
         ],
         "style": Object {
           "backgroundColor": "#F1E9E3",
@@ -155,6 +174,9 @@ ShallowWrapper {
               },
               "text": "Add Insurance",
             },
+            "leftComponent": <NavigationChevron
+              navigateInsurances={[Function]}
+            />,
             "outerContainerStyles": Object {
               "backgroundColor": "#DC4712",
             },
@@ -167,7 +189,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "navigateInsurances": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
