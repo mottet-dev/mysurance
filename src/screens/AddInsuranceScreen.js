@@ -39,6 +39,6 @@ const styles = {
         color: lightColor,
         fontSize: 20
     }
-}
+};
 
 export default AddInsuranceScreen;

@@ -160,6 +160,6 @@ const mapStateToProps = state => {
         dataSource: ds.cloneWithRows(state.insurances), 
         premiumSum 
     };
-}
+};
 
 export default connect(mapStateToProps, { remove_insurance })(InsurancesList);

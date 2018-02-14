@@ -29,6 +29,6 @@ const styles = {
         borderBottomWidth: 0.5,
         borderColor: strongColor,
     }
-}
+};
 
 export default ListHeader;

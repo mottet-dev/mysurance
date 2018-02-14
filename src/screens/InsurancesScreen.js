@@ -15,7 +15,6 @@ class InsurancesScreen extends Component {
             buttonStyle,
             buttonTextStyle,
             buttonContainerStyle,
-            modalStyle
         } = styles;
 
         return (
@@ -65,11 +64,7 @@ const styles = {
         bottom: 20,
         right: 0,
         left: 0
-    },
-    modalStyle: {
-        width: 200,
-        height: 300
     }
-}
+};
 
 export default InsurancesScreen;
