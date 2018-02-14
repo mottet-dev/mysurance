@@ -5,6 +5,7 @@ Myinsurance is a small React-Native application that helps you keep track of you
 ## How to use it
 ```
 git clone https://github.com/mottet-dev/mysurance.git
+cd mysurance
 npm install
 npm start
 ```
