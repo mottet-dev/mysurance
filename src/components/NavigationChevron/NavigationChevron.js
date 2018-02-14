@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from 'react-native-elements';
+import PropTypes from 'prop-types';
 
 import { lightColor } from '../../constants';
 
@@ -19,6 +20,10 @@ const NavigationChevron = props => {
             onPress={() => props.navigateInsurances()}
         />
     );
+};
+
+NavigationChevron.propTypes = {
+    navigateInsurances: PropTypes.func.isRequired
 };
 
 export default NavigationChevron;

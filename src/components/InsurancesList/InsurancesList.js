@@ -4,8 +4,10 @@ import { List, ListItem, Button } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { remove_insurance } from '../../actions/insurances_actions';
 import Overlay from 'react-native-modal-overlay';
+import PropTypes from 'prop-types';
 
 import { textColor, backgroundColor, lightColor, strongColor } from '../../constants';
+import ListHeader from '../ListHeader/ListHeader';
 
 class InsurancesList extends Component {
     constructor(props) {
@@ -23,7 +25,7 @@ class InsurancesList extends Component {
                 subtitle={rowData.category}
                 chevronColor="black"
                 titleStyle={{ color: textColor, fontSize: 18, fontWeight: 'bold' }}
-                subtitleStyle={{ color: textColor, fontSize: 16, fontWeight: 'normal' }}
+                subtitleStyle={{ color: textColor, fontSize: 12, fontWeight: 'normal' }}
                 rightTitle={`${rowData.premium} CHF`}
                 rightTitleStyle={{ color: textColor, fontSize: 16, fontWeight: 'normal' }}
                 onPress={() => this.setState({ showModal: true, currentSelectedInsurance: rowData })}
@@ -59,6 +61,8 @@ class InsurancesList extends Component {
                     <ListView
                         renderRow={this.renderRow.bind(this)}
                         dataSource={this.props.dataSource}
+                        enableEmptySections={true}
+                        renderHeader={() => <ListHeader premiumSum={this.props.premiumSum} />}
                     />
                 </List>
 
@@ -134,9 +138,28 @@ const styles = {
     },
 }
 
+InsurancesList.propTypes = {
+    remove_insurance: PropTypes.func.isRequired,
+    premiumSum: PropTypes.number.isRequired,
+    dataSource: PropTypes.object.isRequired
+};
+
 const mapStateToProps = state => {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    return { dataSource: ds.cloneWithRows(state.insurances) };
+    let premiumSum = 0;
+
+    const insurancesPremium = state.insurances.map(insurance => {
+        return parseInt(insurance.premium, 10);
+    });
+
+    if (insurancesPremium.length > 0) {
+        premiumSum = insurancesPremium.reduce((pv, cv) => pv + cv, 0);
+    }
+    
+    return { 
+        dataSource: ds.cloneWithRows(state.insurances), 
+        premiumSum 
+    };
 }
 
 export default connect(mapStateToProps, { remove_insurance })(InsurancesList);

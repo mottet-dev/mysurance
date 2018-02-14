@@ -24,6 +24,7 @@ class InsurancesScreen extends Component {
                     outerContainerStyles={headerOuterStyle}
                     centerComponent={{ text: 'Mysurance', style: componentTitleStyle }}
                 />
+                
                 <InsurancesList />
 
                 <View style={buttonContainerStyle}>

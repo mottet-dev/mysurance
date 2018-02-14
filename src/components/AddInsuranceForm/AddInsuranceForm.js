@@ -3,6 +3,7 @@ import { View, Picker } from 'react-native';
 import { FormInput, FormLabel, Button } from 'react-native-elements';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 import { textColor, strongColor, lightColor } from '../../constants';
 import { add_insurance } from '../../actions/insurances_actions';
@@ -152,8 +153,6 @@ const styles = {
     },
     formInputContainerStyle: {
         backgroundColor: lightColor,
-        borderWidth: 0.5,
-        borderColor: '#95989A'
     },
     formInputStyle: {
         color: 'black',
@@ -170,6 +169,11 @@ const styles = {
         color: 'black',
         fontSize: 16,
     }
-}
+};
+
+AddInsuranceForm.propTypes = {
+    add_insurance: PropTypes.func.isRequired,
+    navigateInsurances: PropTypes.func.isRequired
+};
 
 export default connect(null, { add_insurance })(AddInsuranceForm);
