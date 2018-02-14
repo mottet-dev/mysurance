@@ -20,12 +20,16 @@ class AddInsuranceForm extends Component {
     }
 
     componentDidMount() {
+        /* get the insurances categories */
         axios.get('https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Types_of_insurance&cmtype=subcat&format=json&origin=*')
             .then(response => {
                 const categories = response.data.query.categorymembers.map(category => {
+                    // cleans the title and adds it to the 'categories' array
                     return category.title.replace('Category:', '');
                 });
 
+                /* the default value of the 'selectedCategory' state is the first 
+                element of the categories array */
                 this.setState({ 
                     categories,
                     selectedCategory: categories[0]
@@ -36,17 +40,31 @@ class AddInsuranceForm extends Component {
             });
     }
 
+    validInput(input) {
+        /* checks if the given input is not null, undefined or blank */
+        return !(!input || /^\s*$/.test(input));
+    } 
+
+    handleButtonPress() {
+        const { title, premium, selectedCategory } = this.state;
+        
+        /* checks if the required input contains something */
+        if (this.validInput(title) && this.validInput(premium) && this.validInput(selectedCategory)) {
+            const insurance = { title, premium, category: selectedCategory };
+
+            // reset the inputs state
+            this.setState({ title: '', premium: '', selectedCategory: this.state.categories[0]});
+            // add the insurance to the state
+            this.props.add_insurance(insurance, () => { this.props.navigateInsurances(); });
+        }
+
+        
+    }
+
     renderPicker() {
         return this.state.categories.map(category => {
             return (<Picker.Item key={category} label={category} value={category} />);
         });
-    }
-
-    handleButtonPress() {
-        const { title, premium, selectedCategory } = this.state;
-        const insurance = { title, premium, category: selectedCategory };
-
-        this.props.add_insurance(insurance);
     }
 
     render() {
@@ -120,7 +138,8 @@ const styles = {
     },
     buttonStyle: {
         backgroundColor: strongColor,
-        height: 60
+        height: 60,
+        borderRadius: 50
     },
     buttonTextStyle: {
         fontSize: 18

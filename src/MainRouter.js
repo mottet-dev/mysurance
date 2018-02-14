@@ -10,7 +10,8 @@ const MainRouter = TabNavigator({
     navigationOptions: {
         tabBarVisible: false
     },
-    lazy: true
+    lazy: true,
+    swipeEnabled: false
 });
 
 export default MainRouter;

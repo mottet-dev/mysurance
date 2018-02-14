@@ -5,6 +5,7 @@ import { Header } from 'react-native-elements';
 import { backgroundColor, lightColor, strongColor } from '../constants';
 
 import AddInsuranceForm from '../components/AddInsuranceForm/AddInsuranceForm';
+import NavigationChevron from '../components/NavigationChevron/NavigationChevron';
 
 class AddInsuranceScreen extends Component {
     render() {
@@ -14,10 +15,13 @@ class AddInsuranceScreen extends Component {
             <View style={screenStyle}>
                 <StatusBar hidden />
                 <Header
+                    leftComponent={<NavigationChevron navigateInsurances={() => this.props.navigation.navigate('insurances')} />}
                     outerContainerStyles={headerOuterStyle}
                     centerComponent={{ text: 'Add Insurance', style: componentTitleStyle }}
                 />
-                <AddInsuranceForm />
+                <AddInsuranceForm 
+                    navigateInsurances={() => this.props.navigation.navigate('insurances')}
+                />
             </View>
         );
     }
