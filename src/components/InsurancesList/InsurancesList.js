@@ -148,6 +148,7 @@ const mapStateToProps = state => {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     let premiumSum = 0;
 
+    /* calculate the sum of all the premiums */
     const insurancesPremium = state.insurances.map(insurance => {
         return parseInt(insurance.premium, 10);
     });

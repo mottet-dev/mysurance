@@ -25,4 +25,5 @@ describe('<AddInsuranceForm />', () => {
     it('contains 1 <Button />', () => {
         expect(component.find('View').children(Button).length).toEqual(1);
     });
+    
 });
